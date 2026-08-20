@@ -2,10 +2,11 @@
 __pycache__/
 *.py[codz]
 *$py.class
-
+.artifact/
 # C extensions
 *.so
-
+artifact/
+catboost_info/
 # Distribution / packaging
 .Python
 build/
