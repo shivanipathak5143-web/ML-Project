@@ -97,5 +97,5 @@ class DataTransoformation:
             )
 
         except Exception as e:
-            raise CustomException
+            raise CustomException(e,sys)
         
