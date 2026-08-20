@@ -1,1 +1,78 @@
-<h1>Welcome to the home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exam Performance Indicator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E4EADB;
+    --panel:#F7F8F2;
+    --ink:#20261E;
+    --ink-soft:#5B6357;
+    --rule:#B7C2A8;
+    --red:#A6362C;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    font-family:'Inter',sans-serif;
+    color:var(--ink);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+  }
+  .card{
+    background:var(--panel);
+    border:1.5px solid var(--ink);
+    box-shadow:6px 6px 0 var(--rule);
+    max-width:460px;
+    padding:44px 38px;
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  h1{
+    font-family:'Space Mono',monospace;
+    font-size:24px;
+    letter-spacing:0.5px;
+    margin-bottom:14px;
+  }
+  p{
+    font-size:14px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin-bottom:28px;
+  }
+  a.btn{
+    display:inline-block;
+    padding:13px 30px;
+    background:var(--ink);
+    color:var(--panel);
+    text-decoration:none;
+    font-family:'Space Mono',monospace;
+    font-size:13px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+  }
+  a.btn:hover{ background:var(--red); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="eyebrow">Form 07-B</div>
+    <h1>Exam Performance Indicator</h1>
+    <p>Fill in a student's background and prior scores to predict their Math exam score.</p>
+    <a class="btn" href="{{ url_for('predict_datapoint') }}">Open Assessment Form</a>
+  </div>
+</body>
+</html>

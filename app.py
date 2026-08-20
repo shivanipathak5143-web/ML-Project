@@ -35,4 +35,7 @@ def predict_datapoint():
 
 
 if __name__=='__main__':
+    import os
+    if os.environ.get('WERKZEUG_RUN_MAIN') != 'true':
+        print("\n  → App running at: http://127.0.0.1:5000\n")
     app.run(host='0.0.0.0',debug=True)
